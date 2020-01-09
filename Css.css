@@ -1,0 +1,647 @@
+@font-face {
+    src: url("fonts/TaxiDriver.ttf");
+    font-family: "Taxi Driver";
+}
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+/*.container {
+    width: 90%;
+    height: 170px;
+    margin: auto;
+}*/
+/*html {
+	scroll-behavior: smooth;
+}*/
+.header {
+    width: 100%;
+    height: 170px;
+    background-color: #9adbca;
+    position: fixed;
+    transition: all 0.4s ease-out;
+}
+.min-header {
+    width: 100%;
+    height: 140px;
+    background-color: #9adbca;
+    position: fixed;
+    transition: all 0.4s ease-out;
+}
+.container2 {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+        "lgo ... nav";
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+.max-logo {
+    grid-area: lgo;
+    width: 250px;
+    height: 150px;
+    transition: all 0.4s ease-out;
+    margin-top: 10px;
+}
+.min-logo {
+    grid-area: lgo;
+    width: 170px;
+    height: 100px;
+    transition: all 0.4s ease-out;
+    margin-top: 10px;
+}
+.nav-bar {
+    grid-area: nav; 
+    display: grid;
+    align-content: center;
+}
+.nav-bar ul {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 25px;
+    margin-top: 20px;
+}
+.nav-bar a {
+    position: relative;
+    font-family: "Taxi Driver";
+    text-transform: uppercase;
+    transition: all 0.4s ease-out;
+    text-decoration: none;
+}
+.nav-bar a::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.nav-bar a:hover::before {
+    transform: scaleX(1);
+    transition: all 0.2s ease-out;
+}
+.nav-bar a::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+.nav-bar a:hover::after {
+    transform: scaleX(1);
+    transition: all 0.2s ease-out;
+}
+.max-nav a {
+    font-size: 20px;
+    color: black;
+}
+.min-nav a {
+    font-size: 18px;
+    color: black;
+}
+li {
+    list-style: none;
+    text-align: center;
+}
+.ghost {
+    width: 100%;
+    height: 170px;
+    background: #9adbca;
+}
+main img {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+main section {
+    display: grid;
+    justify-content: normal;
+    text-align: center;
+    font-family: "Taxi Driver";
+}
+main span {
+    margin-top: 80px;
+    font-size: 60px;
+    text-shadow: 1px 0.5px;
+    height: 0px;
+}
+main section:nth-child(odd) {
+    height: 125vh;
+    background-color: white;
+}
+
+/*********** DEFINIÇÃO DE OPACIDADE SOBRE A FOTO INICIAL ***********/
+#color {
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.align {
+    text-align: -webkit-center;
+    font-family: "Taxi Driver";
+    font-size: 100px;
+    text-shadow: 1.5px 1.5px 1.5px;
+    margin-top: -470px;
+    text-align: -moz-center;
+}
+#img {
+    background-image: url('capa.jpg');
+    width: 100%;
+    height: 1200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.align2 {
+    text-align: -webkit-center;
+    font-family: "Taxi Driver";
+    text-shadow: 1px 1px 1px;
+    font-size: 31px;
+    text-align: -moz-center;
+    margin-top: 1%;
+}
+.align3 {
+    text-align: center;
+    margin-left: 200px;
+    font-family: "Taxi Driver";
+    text-shadow: 0.5px 0.5px 0.5px;
+    font-size: 21px;
+    margin-top: 1%;
+}
+/*******************************************************************/
+
+/*************************DEFINIÇÕES DAS IMAGEMS DOS PROJETOS****************************/
+.itemBoi {
+    width: 250px;
+    height: 350px;
+}
+.itemBoi img {
+    height: 250px;
+    width: 250px;
+    padding-top: 10px;
+}
+.espacoP {
+    padding-top: 5px;
+}
+.itemDemais {
+    width: 270px;
+    height: 350px;
+    white-space: nowrap;
+}
+.itemDemais img {
+    height: 210px;
+    width: 210px;
+    padding-top: 10px;
+}
+.item2 {
+    display: flex;
+    flex-direction: column; 
+}
+.item2 h2 {
+    margin-left: 1px;
+}
+.item2 p {
+    margin-left: 1px;
+    font-size: 20px;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+}
+.item h2 {
+    margin-left: -60px;
+}
+.item p {
+    margin-left: -60px;
+    font-size: 20px;
+}
+.organizaçao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.grade {
+    max-width: 55%;
+    display: flex;
+    margin: 0 auto;
+}
+/*******************************************************************/
+
+/****************************** DEFINIÇÕES BOTÃO SAIBA MAIS *************************************/
+.btnSM {
+    margin-top: 20px;
+    width: 120px;
+    height: 30px;
+    margin-left: 42px;
+    font-family: "Taxi Driver";
+    font-size: 17px;
+    border-radius: 7px;
+    border: 1px solid black;
+    background-color: #9adbca;
+    outline: none;
+    cursor: pointer;
+} 
+.btnSM:active {
+    background-color: #7bb5a6;
+}
+.btnBoi {
+    margin-left: 67px;
+}
+.alinhaBtn {
+    margin-top: 57px;
+}
+/*******************************************************************/
+
+/************************ DEFINIÇÕES TELA MODAL PADRÃO PARA TODAS *************************/
+.modal {
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 300vh;
+    position: fixed;
+    margin-top: -1370px;
+}
+.modal img {
+    margin-top: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.sobre1 {
+    width: 50%;
+    height: 590px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px black;
+    margin: 0;
+    padding: 0;
+    margin-top: -17px;
+}
+.sobre2 {
+    width: 40%;
+    height: 265px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px black;
+    margin: 0;
+    padding: 0;
+    margin-top: 10%;
+}
+.contain {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    width: 90%;
+    margin-left: 5%;
+}
+/*********************** DEFINIÇÃO ROTA DEFAULT DA CLASSE ********************************/
+.default {
+    display: none;
+}
+/*********************** DEFINIÇÃO DO VIDEO ********************************/
+#vid {
+    background-color:white;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#vid video {
+    width: 70%;
+    border-radius: 10px;
+}
+/************************* INFO MODAL DO BOIADEIRO *******************************/
+.textoBoi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    font-family: "Taxi Driver"
+}
+.textoBoi h2 {
+    margin-top: 5%;
+    font-size: 35px;
+}
+.textoBoi p {
+    margin-top: 7%;
+    font-size: 20px;
+    text-align: justify;
+}
+.imagemBoi img {
+    width: 85%;
+    height: 85%;
+    margin-left: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/**********************************************************************/
+/************************* INFO MODAL DA JASMIM *******************************/
+.imagemJas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagemJas img {
+    width: 87%;
+    height: 88%;
+    border-radius: 10px;
+    width: 87%;
+    height: 88%;
+    border-radius: 10px;
+    margin-top: -1%;
+    margin-left: 0%;
+}
+/**********************************************************************/
+/* RESPONSIVO NOTEBOOK */
+@media screen and (max-width: 1536px) {
+    .organizaçao {
+        margin-top: 145px;
+    }
+    .item2 {
+        margin-bottom: 35px;
+    }
+    .item {
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .organizaçao {
+        margin-top: 140px;
+        margin-left: 5px;
+    }
+    .item2 {
+        margin-bottom: 35px; 
+    }
+    .item {
+        margin-bottom: 35px;
+    }
+}
+
+/*********************/
+
+/* RESPONSIVO MOBILE */
+
+@media screen and (max-width: 768px) {
+    .header {
+        height: 125px;
+    }
+    .min-header {
+        height: 116px;
+    }
+    .container {
+        position: relative;
+        width: 100%;
+    }
+    .container2 {
+        width: 80%;
+        margin: auto;
+        margin-top: 5px;
+        display: grid;
+        grid-template-areas: 
+            "lgo ... mnu";
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+    }
+    .menu {
+        grid-area: mnu;
+    }
+    .hamburguer {
+        position: relative;
+        width: 30px;
+        height: 3px;
+        background-color: black;
+    }
+    .hamburguer::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transition: all 0,4s ease-out;
+    }
+    .hamburguer::after {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        transition: all 0,4s ease-out;
+    }
+    .max-logo {
+        grid-area: lgo;
+        width: 150px;
+        height: 100px;
+    }
+    .min-logo {
+        grid-area: lgo;
+        width: 130px;
+        height: 90px;
+    }
+    .nav-bar {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #9adbca;
+        transform: translateX(-100%);
+        transition: all 0.4s ease-out;
+    }
+    .max-nav {
+        top: 119px;
+        height: calc(100vh - 119px);
+    }
+    .min-nav {
+        top: 110px;
+        height: calc(100vh - 110px);
+    }
+    .menu-opened {
+        transform: translateX(0);
+    }
+    .nav-bar ul {
+        grid-auto-flow: row;
+        grid-gap: 80px;
+        margin-top: 20px;
+        justify-content: center;
+    }
+    .ghost {
+        height: 120px;
+    }
+    .close-btn {
+        width: 32px;
+        transform: rotateZ(45deg);
+    }
+    .close-btn::before, .close-btn::after {
+        top: 0;
+        transform: rotateZ(90deg);
+    }
+    .nav-bar a:hover::before {
+        display: none;
+    }
+    .nav-bar a:hover::after {
+        display: none;
+    }
+    .max-nav a {
+        font-size: 20px;
+        color: black;
+    }
+    .min-nav a {
+        font-size: 20px;
+        color: black;
+    }
+    /*********** DEFINIÇÃO DE OPACIDADE SOBRE A FOTO INICIAL MOBILE***********/
+    #color {
+        background-color: rgba(0,0,0,0.5);
+        width: 100%;
+        height: 545px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+    .align {
+        text-align: -webkit-center;
+        font-family: "Taxi Driver";
+        font-size: 50px;
+        text-shadow: 1.5px 1.5px 1.5px;
+        margin-top: -91px;
+    }
+    #img {
+        background-image: url('capa.jpg');
+        height: 545px;
+    }
+    .align2 {
+        font-size: 25px;
+        margin-top: 5%;
+    }
+    .align3 {
+        font-size: 19px;
+        margin-left: 160px;
+        margin-top: 5%;
+    }
+    /*******************************************************************/
+    main span {
+        margin-top: 50px;
+        font-size: 45px;
+    }
+    /*************************DEFINIÇÕES DAS IMAGEMS DOS PROJETOS****************************/
+    .itemBoi {
+        margin-top: -10px;
+        height: 350px;
+    }
+    main section:nth-child(odd) {
+        height: 135vh;
+    }
+    .grade {
+        max-width: 55%;
+    }
+    .organizaçao li {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        margin-top: 35px;
+    }
+    .item2 {
+        display: flex;
+        flex-direction: column; 
+    }
+    .item2 h2 {
+        margin-left: -50px;
+    }
+    .item2 p {
+        margin-left: -50px;
+    }
+    .item2 img {
+        margin-left: -20px;   
+    }
+    .alinhaResp {
+        margin-top: 70px;
+    }
+    /*******************************************************************/
+    /****************************** DEFINIÇÕES BOTÃO SAIBA MAIS *************************************/
+    .btnSM {
+        margin-top: 20px;
+        width: 120px;
+        height: 30px;
+        margin-left: 42px;
+        font-family: "Taxi Driver";
+        font-size: 17px;
+        border-radius: 7px;
+        border: 1px solid black;
+        background-color: #9adbca;
+        outline: none;
+        cursor: none;
+    } 
+    .btnSM:active {
+        background-color: #7bb5a6;
+    }
+    .itemSom {
+        margin-bottom: 20px;
+    }
+    /*******************************************************************/
+    /*****************************DEFINIÇÕES TELA MODAL*************************/
+    .modal {
+        margin-top: -665px;
+    }
+    .modal img {
+        margin-left: 20px;
+    }
+    .contain {
+        display: flex;
+        flex-direction: column;
+    }
+    .contain section {
+        width: 100%;
+        height: 260px;
+        margin-top: 3%;
+    }
+    .textoBoi h2 {
+        text-align: center;
+    }
+    .textoBoi p {
+        margin-top: 2%;
+    }
+    /***************************************************************************/
+    /************************* INFO MODAL DA JASMIM *******************************/
+    .imagemJas img {
+        margin-left: 0%;
+    }
+    /**********************************************************************/
+    /*********************** DEFINIÇÃO DO VIDEO MOBILE ********************************/
+    #vid {
+        background-color:white;
+        width: 100%;
+        height: 300px;
+    }
+    #vid video {
+        width: 90%;
+    }
+}
+
+
+
+
+
